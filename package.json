@@ -1,0 +1,7 @@
+{
+    "devDependencies": {
+        "parcel": "^2.8.3"
+    },
+    "source": "./index.html"
+
+}
