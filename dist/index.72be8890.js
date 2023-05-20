@@ -16,10 +16,9 @@
                 break;
         }
     });
-    console.log("hi2");
     function writeCode(prefix, code, fn) {
         let container = document.querySelector("#code");
-        let styleTag = document.querySelector("styleTag");
+        let styleTag = document.querySelector("#styleTag");
         let n = 0;
         let id;
         id = setTimeout(function run() {
@@ -31,7 +30,6 @@
             else fn && fn.call();
         }, duration);
     }
-    console.log("hi3");
     let code = `/*
     * 首先，为皮卡丘画出黄色的皮肤
     */
@@ -83,14 +81,15 @@
     /*
     * 左眼
     */
-    .eye>.left-eye {
+    .left.eye {
+        position: absolute;
         right: 50%;
         margin-right: 90px;
     }
     /*
     * 右眼
     */
-    .eye>.right-eye {
+    .right.eye {
         left: 50%;
         margin-left: 90px;
     }
@@ -109,12 +108,12 @@
     /*
     * 将左右脸上的腮红放到正确的位置
     */
-    .face>.left-face {
+    .left.face {
         right: 50%;
         margin-right: 116px;
     }
     
-    .face>.right-face {
+    .right.face {
         left: 50%;
         margin-left: 116px;
     }
@@ -124,21 +123,21 @@
     .upperLip {
         width: 80px;
         height: 25px;
-        border: 2px solid black;
+        border: 5px solid black;
         position: absolute;
         top: 50px;
         background: #FDE348;
     }
     
-    .upperLip>.left-upperLip {
+    .left.upperLip {
         right: 50%;
         border-bottom-left-radius: 40px 25px;
         border-top: none;
-        border-left: none;
-        transform: rotate(20deg);
+        border-right: none;
+        transform: rotate(-20deg);
     }
     
-    .upperLip>.right-upperLip {
+    .right.upperLip {
         left: 50%;
         border-bottom-right-radius: 40px 25px;
         border-top: none;
